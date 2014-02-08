@@ -1,0 +1,76 @@
+Source: libyasdi
+Priority: extra
+Maintainer: Christian Simon <simon@swine.de>
+Build-Depends: debhelper (>= 8.0.0), cmake
+Standards-Version: 3.9.4
+Section: libs
+Homepage: http://github.com/simonswine/libyasdi
+
+Package: libyasdi-dev
+Section: libdevel
+Architecture: any
+Depends: libyasdi1 (= ${binary:Version})
+Description: communication library for sma solar inverters -- development
+ This software represents an implementation of the “SMA Data Protocol”,
+ which can be used to communicate with SMA inverters and other SMA devices.
+ .
+ The software is available entirely as source code and was developed with the “C” programming language.
+ It has been designed to allow quick and easy porting to other operating systems.
+ Currently, implementations are available for the following systems:
+ Linux, Windows32, WindowsCE, MacOS X, RTKernel32, AmigaOS, ...)
+ .
+ YASDI is available as a library (under Linux: Shared Objects (“.so”), under Windows: DLL).
+ Hence, YASDI is not an independent application, but it can be used to develop independent applications
+ that can communicate with SMA devices without the need to implement the actual protocol.
+ .
+ RS232/RS485/Powerline are currently available as communication interfaces.
+ It supports the process of requesting current measured values and changing parameters settings. 
+ .
+ The readout of measurement values (archive values) recorded by a SunnyBoyControl or SunnyBeam is 
+ unfortunately not possible.
+
+Package: libyasdi1
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: communication library for sma solar inverters
+ This software represents an implementation of the “SMA Data Protocol”,
+ which can be used to communicate with SMA inverters and other SMA devices.
+ .
+ The software is available entirely as source code and was developed with the “C” programming language.
+ It has been designed to allow quick and easy porting to other operating systems.
+ Currently, implementations are available for the following systems:
+ Linux, Windows32, WindowsCE, MacOS X, RTKernel32, AmigaOS, ...)
+ .
+ YASDI is available as a library (under Linux: Shared Objects (“.so”), under Windows: DLL).
+ Hence, YASDI is not an independent application, but it can be used to develop independent applications
+ that can communicate with SMA devices without the need to implement the actual protocol.
+ .
+ RS232/RS485/Powerline are currently available as communication interfaces.
+ It supports the process of requesting current measured values and changing parameters settings. 
+ .
+ The readout of measurement values (archive values) recorded by a SunnyBoyControl or SunnyBeam is 
+ unfortunately not possible.
+
+Package: yasdishell
+Section: bin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: communication library for sma solar inverters -- test binary
+ This software represents an implementation of the “SMA Data Protocol”,
+ which can be used to communicate with SMA inverters and other SMA devices.
+ .
+ The software is available entirely as source code and was developed with the “C” programming language.
+ It has been designed to allow quick and easy porting to other operating systems.
+ Currently, implementations are available for the following systems:
+ Linux, Windows32, WindowsCE, MacOS X, RTKernel32, AmigaOS, ...)
+ .
+ YASDI is available as a library (under Linux: Shared Objects (“.so”), under Windows: DLL).
+ Hence, YASDI is not an independent application, but it can be used to develop independent applications
+ that can communicate with SMA devices without the need to implement the actual protocol.
+ .
+ RS232/RS485/Powerline are currently available as communication interfaces.
+ It supports the process of requesting current measured values and changing parameters settings. 
+ .
+ The readout of measurement values (archive values) recorded by a SunnyBoyControl or SunnyBeam is 
+ unfortunately not possible.

@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+%:
+	dh  $@ --sourcedirectory=projects/generic-cmake/
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p $(CURDIR)/debian/tmp/usr/include/libyasdi/
+	cp include/*.h $(CURDIR)/debian/tmp/usr/include/libyasdi/
