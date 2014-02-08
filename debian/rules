@@ -7,4 +7,8 @@ override_dh_auto_test:
 override_dh_auto_install:
 	dh_auto_install
 	mkdir -p $(CURDIR)/debian/tmp/usr/include/libyasdi/
+	mkdir -p $(CURDIR)/debian/tmp/etc
 	cp include/*.h $(CURDIR)/debian/tmp/usr/include/libyasdi/
+	cp smalib/*.h $(CURDIR)/debian/tmp/usr/include/libyasdi/
+	cp libs/*.h $(CURDIR)/debian/tmp/usr/include/libyasdi/
+	cp debian/yasdi.ini $(CURDIR)/debian/tmp/etc/
